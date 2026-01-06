@@ -433,36 +433,6 @@ const removeSkill = (index) => {
     }
   };
 
-  // const applyResumeAutofill = () => {
-  //   if (!resumeSuggestions) return;
-
-  //   Object.entries(resumeSuggestions).forEach(([key, obj]) => {
-  //     if (!obj.checked) return;
-
-  //     switch (key) {
-  //       case "about":
-  //         setAbout(obj.value);
-  //         break;
-
-  //       case "skills":
-  //         setSkillsText(Array.isArray(obj.value) ? obj.value.join(", ") : obj.value);
-  //         break;
-
-  //       case "education":
-  //         setEducation(Array.isArray(obj.value) ? obj.value : []);
-  //         break;
-
-  //       case "experience":
-  //         setExperience(Array.isArray(obj.value) ? obj.value : []);
-  //         break;
-
-  //       default:
-  //         break;
-  //     }
-  //   });
-
-  //   setShowAutofillModal(false);
-  // };
   const applyResumeAutofill = () => {
   if (!resumeSuggestions) return;
 

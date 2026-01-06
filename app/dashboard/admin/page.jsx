@@ -548,26 +548,15 @@ export default function Dashboard() {
     if (val && !skills.includes(val)) {
       setSkills([...skills, val]);
       setSkillInput("");
-      // This clears the red error message visually
       setErrors((prev) => ({ ...prev, skills: undefined }));
     }
   }
 };
 
-  // const removeSkill = (index) => {
-  //   setSkills(skills.filter((_, i) => i !== index));
-  // };
+
   const removeSkill = (index) => {
   const newSkills = skills.filter((_, i) => i !== index);
   setSkills(newSkills);
-
-  // If no skills left → show error immediately
-  // if (newSkills.length === 0) {
-  //   setErrors((prev) => ({ ...prev, skills: "At least one skill is required" }));
-  // } else {
-  //   // If skills exist → clear error
-  //   setErrors((prev) => ({ ...prev, skills: undefined }));
-  // }
 };
 
   // Validation Function
@@ -880,8 +869,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Rest of the component (Jobs Table, Modal, etc.) remains unchanged */}
-        {/* ... [Previous Jobs Table and Modal code unchanged] ... */}
+      
 
         {/* Jobs Table */}
         <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
